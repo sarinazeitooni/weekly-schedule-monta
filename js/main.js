@@ -1,6 +1,12 @@
+debugger
+
 let hours = "8:30 - 7:00";
+let container = document.getElementById("mainContainer");
+let dataContainer="";
+let items = document.getElementsByClassName("items");
 let data = [
     shanbe =[ {
+        day:"شنبه",
      name: "ادبیات فارسی" ,
     teacher: "محمدرضا خوش برخورد" ,
     hours: hours ,
@@ -33,7 +39,9 @@ let data = [
     exam:false
     }],
 
-    yekshanbe=[{name: "جبر و احتمال 3" ,
+    yekshanbe=[{
+        day:"یکشنبه",
+        name: "جبر و احتمال 3" ,
     teacher: "رضا علوی" ,
     hours: hours ,
     online :false,
@@ -51,7 +59,8 @@ let data = [
     }],
 
     doshanbe=[
-        {name: "آزمون ریاضی" ,
+        {day:"دوشنبه",
+            name: "آزمون ریاضی" ,
         teacher: "محمدرضا خوش برخورد" ,
         hours: hours ,
         online :false,
@@ -96,7 +105,9 @@ let data = [
 
     ],
 
-    seshanbe=[{name: "جبر و احتمال 3" ,
+    seshanbe=[{
+        day:"سه شنبه",
+        name: "جبر و احتمال 3" ,
     teacher: "رضا علوی" ,
     hours: hours ,
     online :false,
@@ -112,7 +123,9 @@ let data = [
         online :false,
         exam: true
     }],
-    cheharshanbe=[{name: "جبر و احتمال 3" ,
+    cheharshanbe=[{
+        day:"چهارشنبه",
+        name: "جبر و احتمال 3" ,
     teacher: "رضا علوی" ,
     hours: hours ,
     online :false,
@@ -130,6 +143,7 @@ let data = [
     }],
 
     panjshanbe=[{
+        day:"پنج شنبه",
         name: "زبان" ,
        teacher: "محمدرضا خوش برخورد" ,
        hours: hours ,
@@ -140,8 +154,27 @@ let data = [
        hours: hours ,
        online :false
        }]
-
 ];
-data = JSON.stringify(data);
+    function initialData(){
+        calenderView();
+    };
+    function calenderView(){
+        // container.classList.add("flexContainer");
+        // items.classList.add("flexChildren");
+        container.innerHTML = dataContainer;
+    };
+    data.map(daysConstructer);
+    function daysConstructer(item){
+    dataContainer += `<div class=" items flexChildren">${item[0].day}<hr>
+    ${item.map(classConstructer)} </div>`;
+    };
+    function classConstructer(element){
+        return `<div class="flexChildren">${element.name}<br>${element.teacher}<br>${element.hours}</div>`;
+    };
 
-console.log(data);
+    
+    function listView(){
+        container.classList.remove("flexContainer");
+        items.classList.remove("flexChildren");
+        };
+    
