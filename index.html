@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="css/monta.css">
     <link rel="stylesheet" href="css/montav2.css">
 </head>
-<body>
-<div id="mainContainer" class="home-header"></div>
+<body class="body" onload="initialData()">
+<div class="home-header">
+    <h3 class="text-dark-n">برنامه هفتگی کلاس پنجم 5/1</h3>
+    <button id="calenderView" onclick="calenderView()" class="space-4-vertical-n is-text">نمایش تقویمی </button>
+    <button id="listView" onclick="listView()" class="space-4-vertical-n is-text">نمایش لیستی </button>
+    <br>
+   <div id="mainContainer" class="flexContainer container"></div> 
+</div>
 
     <script src="js/main.js"></script>
 </body>
