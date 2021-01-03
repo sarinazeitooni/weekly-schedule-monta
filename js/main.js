@@ -31,16 +31,16 @@ function initialData() {
 function colorPicker(element) {
     switch(element.type) {
         case "normal":
-            bgColoritem = "#e4f2e1";
+            bgColoritem = "#d8f3c1";
           break;
         case "exam":
-            bgColoritem = "#faf3e1";
+            bgColoritem = "#fff5d3";
           break;
           case "break":
-            bgColoritem = "#f5e5ff";
+            bgColoritem = "#dbf5fa";
           break;
           case "lunch":
-            bgColoritem = "#e1f4fb";
+            bgColoritem = "#f9e1fc";
           break;
           default: "normal"
       }
@@ -82,8 +82,8 @@ function classConstructerCalender(element) {
 
 function classConstructerList(element) {
         return `<div style="background-color :${colorPicker(element)};
-         width:100%" class="otherItem is-rounded text-size-12-n">
-        <span class="space-24-left-n"> ${element.name} </span><span class="space-24-left-n"> ${element.teacher} </span><span class="space-24-left-n"> ${element.hours} </span><span class=" ${onlineCheck(element)} "></span>
+         width:100%" class="otherItem is-rounded text-size-10-mobile-n text-size-12-n">
+        <span class="space-24-left-n space-12-mobile-n"> ${element.name} </span><span class="space-12-mobile-n space-24-left-n"> ${element.teacher} </span><span class="space-24-left-n space-12-mobile-n"> ${element.hours} </span><span class=" ${onlineCheck(element)} "></span>
         <span class="is-pulled-left  mi-Info"></span><span class="is-pulled-left mi-Info"></span>
         </div>`;
     
