@@ -1,48 +1,82 @@
-.home-header{
-    direction: rtl;
+.home-header {
     margin-top: 3rem !important;
 }
-#mainContainer{
+#mainContainer {
     width: 80%;
     margin: 0 auto;
     border: 1.5px solid rgba(131, 130, 130, 0.315);
-    border-radius: 10px; 
+    border-radius: 10px;
 }
-.flexContainer{
+.flexContainer {
     display: flex;
-    flex-direction: row;
     align-content: center;
     justify-content: center;
 }
-.flexChildrenMain{
+.flexChildrenMain {
     border-left: 1.5px solid rgba(131, 130, 130, 0.315);
     flex-basis: 200px;
     text-align: center;
 }
-.flexChildrenMain:nth-last-child(1){
-    border-left:none
+.flexChildrenMain:nth-last-child(1) {
+    border-left: none
 }
-.flexChildren{
-    flex-basis: 200px;
-    text-align: center;
-}
-.is-text{
-border: none;
-background-color: inherit;
-cursor: pointer;
-}
-hr{
+hr {
     border: 0;
     height: 1.5px;
     background-color: rgba(131, 130, 130, 0.315);
 }
-button:focus{
+button:focus {
     outline: none;
     border: none;
 }
-.is-rounded{
+.is-rounded {
     border-radius: 10px;
 }
-.flexChildrenMain:nth-child(even){
+.flexChildrenMain:nth-child(even) {
     background-color: rgba(240, 236, 236, 0.301);
+}
+.border:nth-child(1) {
+    border: 1.5px solid rgb(252, 252, 88);
+}
+.border:nth-child(2) {
+    border: 1.5px solid rgb(42, 216, 42);
+}
+.dayItem {
+    margin: 15px 0;
+    padding: 3px;
+    border: 1.5px solid gray;
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+}
+.otherItem {
+    padding: 5px;
+}
+@media screen and (max-width: 768px) {
+    #mainContainer {
+        width: 90%;
+        border: none;
+    }
+    #mainContainer {
+        display: block;
+        align-content: stretch;
+        justify-content: flex-start;
+    }
+    hr {
+        visibility: hidden;
+    }
+    .flexChildrenMain {
+        border: none;
+    }
+    .is-fixed-bottom-mobile {
+        position: fixed;
+        bottom: 0;
+    }
+}
+@font-face {
+    font-family: 'monta';
+    src: url("../icons/fonts/Monta-Iconpack-V2019.ttf");
+    src: url("../icons/fonts/Monta-Iconpack-V2019.woff");
+    src: url("../icons/fonts/Monta-Iconpack-V2019.eot");
+    src: url("../icons/fonts/Monta-Iconpack-V2019.svg");
 }
