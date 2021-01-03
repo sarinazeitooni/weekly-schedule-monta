@@ -14,6 +14,14 @@
     align-content: center;
     justify-content: center;
 }
+.flexChildrenMain{
+    border-left: 1.5px solid rgba(131, 130, 130, 0.315);
+    flex-basis: 200px;
+    text-align: center;
+}
+.flexChildrenMain:nth-last-child(1){
+    border-left:none
+}
 .flexChildren{
     flex-basis: 200px;
     text-align: center;
@@ -24,7 +32,6 @@ background-color: inherit;
 cursor: pointer;
 }
 hr{
-    color: rgba(131, 130, 130, 0.315);
     border: 0;
     height: 1.5px;
     background-color: rgba(131, 130, 130, 0.315);
@@ -32,4 +39,10 @@ hr{
 button:focus{
     outline: none;
     border: none;
+}
+.is-rounded{
+    border-radius: 10px;
+}
+.flexChildrenMain:nth-child(even){
+    background-color: rgba(240, 236, 236, 0.301);
 }
