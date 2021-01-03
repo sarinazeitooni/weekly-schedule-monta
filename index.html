@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>task-3</title>
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/monta.css">
     <link rel="stylesheet" href="css/montav2.css">
+    <link rel="stylesheet" href="css/main.css">
+    
 </head>
 <body class="body" onload="initialData()">
-<div class="home-header">
-    <h3 class="text-dark-n">برنامه هفتگی کلاس پنجم 5/1</h3>
-    <button id="calenderView" onclick="calenderView()" class="space-4-vertical-n is-text">نمایش تقویمی </button>
-    <!-- onclick="listView()" -->
-    <button id="listView"  class="space-4-vertical-n is-text">نمایش لیستی </button>
+<div class="home-header content">
+    <h3 class="text-dark-n text-size-32-n text-size-12-mobile-n ">برنامه هفتگی کلاس پنجم 5/1</h3>
+    <div class="column is-hidden-mobile"><span class="mi-Info"></span>
+    <button id="calenderView" onclick="calenderView()" class="space-4-vertical-n button ">نمایش تقویمی </button>
+    <span class="mi-Info"></span>
+    <button id="listView" onclick="listView()" class=" space-4-vertical-n button">نمایش لیستی </button>
+    <span id="deleter" class=" has-text-danger is-pulled-left button ">حذف گروهی</span></div><span class="has-text-danger is-hidden-widescreen-only is-pulled-left button ">حذف گروهی</span>
     <br>
    <div id="mainContainer" class="flexContainer container"></div> 
+   <div class="column is-hidden-fullhd has-background-white space-4-top-n has-text-centered is-fixed-bottom-mobile"><button class="border has-background-white button">فعالسازی این برنامه</button>
+    <button class=" has-background-white button border" >افزودن زنگ</button></div>
+   
 </div>
 
     <script src="js/main.js"></script>
