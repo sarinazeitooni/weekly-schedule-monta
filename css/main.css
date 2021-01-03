@@ -33,7 +33,7 @@ button:focus {
     border-radius: 10px;
 }
 .flexChildrenMain:nth-child(even) {
-    background-color: rgba(240, 236, 236, 0.301);
+    background-color: rgba(236, 236, 236, 0.336);
 }
 .border:nth-child(1) {
     border: 1.5px solid rgb(252, 252, 88);
