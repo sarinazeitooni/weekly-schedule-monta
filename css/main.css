@@ -1,82 +1,118 @@
+.roundedBorder {
+  border: 1.5px solid rgba(131, 130, 130, 0.315);
+  display: inline-block;
+  border-radius: 10px;
+}
+
 .home-header {
-    margin-top: 3rem !important;
+  margin-top: 3rem !important;
 }
+
 #mainContainer {
-    width: 80%;
-    margin: 0 auto;
-    border: 1.5px solid rgba(131, 130, 130, 0.315);
-    border-radius: 10px;
+  width: 80%;
+  margin: -10px auto;
+  border: 1.5px solid rgba(131, 130, 130, 0.315);
+  border-radius: 10px;
 }
+
 .flexContainer {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 .flexChildrenMain {
-    border-left: 1.5px solid rgba(131, 130, 130, 0.315);
-    flex-basis: 200px;
-    text-align: center;
+  border-left: 1.5px solid rgba(131, 130, 130, 0.315);
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  text-align: center;
 }
-.flexChildrenMain:nth-last-child(1) {
-    border-left: none
-}
-hr {
-    border: 0;
-    height: 1.5px;
-    background-color: rgba(131, 130, 130, 0.315);
-}
-button:focus {
-    outline: none;
-    border: none;
-}
-.is-rounded {
-    border-radius: 10px;
+.flexChildrenMain:nth-child(6) {
+  border-left: none;
 }
 .flexChildrenMain:nth-child(even) {
-    background-color: rgba(236, 236, 236, 0.336);
+  background-color: rgba(236, 236, 236, 0.336);
 }
+
+hr {
+  border: 0;
+  height: 1.5px;
+  background-color: rgba(131, 130, 130, 0.315);
+}
+
+button:focus {
+  outline: none;
+  border: none;
+}
+
+.is-rounded {
+  border-radius: 10px;
+}
+
 .border:nth-child(1) {
-    border: 1.5px solid rgba(255, 179, 0, 0.767);
+  border: 1.5px solid rgba(255, 179, 0, 0.767);
 }
 .border:nth-child(2) {
-    border: 1.5px solid rgba(31, 170, 0, 0.459);
+  border: 1.5px solid rgba(31, 170, 0, 0.459);
 }
+
 .dayItems {
-    margin: 15px 0;
-    padding: 3px;
-    border: 1.5px solid gray;
+  margin: 15px 0;
+  padding: 3px;
+  border: 1.5px solid  rgba(131, 130, 130, 0.315);
+  display: inline-block;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .dayItemsmobile {
+    text-align: right !important;
+    border: 1.5px solid  rgba(131, 130, 130, 0.315);
     display: inline-block;
     border-radius: 10px;
-    text-align: center;
-}
-.Items {
-    padding: 5px;
-}
-@media screen and (max-width: 768px) {
-    #mainContainer {
-        width: 90%;
-        border: none;
-    }
-    #mainContainer {
-        display: block;
-        align-content: stretch;
-        justify-content: flex-start;
-    }
-    hr {
-        visibility: hidden;
-    }
-    .flexChildrenMain {
-        border: none;
-    }
-    .is-fixed-bottom-mobile {
-        position: fixed;
-        bottom: 0;
-    }
+  }
+
+  #mainContainer {
+    width: 90%;
+    border: none !important;
+  }
+
+  #mainContainer {
+    display: block !important;
+    -ms-flex-line-pack: stretch !important;
+        align-content: stretch !important;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  hr {
+    visibility: hidden;
+  }
+
+  .flexChildrenMain {
+    border: none;
+  }
+
+  .is-fixed-bottom-mobile {
+    position: fixed;
+    bottom: 0;
+  }
+
+  .icon {
+    visibility: hidden;
+  }
 }
 @font-face {
-    font-family: 'monta';
-    src: url("../icons/fonts/Monta-Iconpack-V2019.ttf");
-    src: url("../icons/fonts/Monta-Iconpack-V2019.woff");
-    src: url("../icons/fonts/Monta-Iconpack-V2019.eot");
-    src: url("../icons/fonts/Monta-Iconpack-V2019.svg");
+  font-family: "monta";
+  src: url("../icons/fonts/Monta-Iconpack-V2019.ttf");
+  src: url("../icons/fonts/Monta-Iconpack-V2019.woff");
+  src: url("../icons/fonts/Monta-Iconpack-V2019.eot");
+  src: url("../icons/fonts/Monta-Iconpack-V2019.svg");
 }
+/*# sourceMappingURL=main.css.map */
