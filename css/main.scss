@@ -1,0 +1,92 @@
+$gray : rgba(131, 130, 130, 0.315);
+$grayborder: 1.5px solid $gray;
+.roundedBorder{
+    border: $grayborder;
+    display: inline-block;
+    border-radius: 10px;
+}
+.home-header {
+    margin-top: 3rem !important;
+}
+#mainContainer {
+    width: 80%;
+    margin: -10px auto;
+    border: $grayborder;
+    border-radius: 10px;
+}
+.flexContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.flexChildrenMain {
+    border-left: $grayborder;
+    flex-basis: 200px;
+    text-align: center;
+    &:nth-child(6){
+        border-left: none
+    }
+    &:nth-child(even) {
+        background-color: rgba(236, 236, 236, 0.336);
+    }
+}
+hr {
+    border: 0;
+    height: 1.5px;
+    background-color: $gray;
+}
+button:focus {
+    outline: none;
+    border: none;
+}
+.is-rounded {
+    border-radius: 10px;
+}
+.border{
+    &:nth-child(1){
+    border: 1.5px solid rgba(255, 179, 0, 0.767);
+    }
+    &:nth-child(2) {
+        border: 1.5px solid rgba(31, 170, 0, 0.459);
+    }
+}
+.dayItems {
+    margin: 15px 0;
+    padding: 3px;
+    @extend .roundedBorder;
+}
+@media screen and (max-width: 768px) {
+    .dayItemsmobile{
+        @extend .roundedBorder;
+        text-align: right !important;
+    }
+    #mainContainer {
+        width: 90%;
+        border: none !important;
+    }
+    #mainContainer {
+        display: block !important;
+        align-content: stretch !important;
+        justify-content: flex-start;
+    }
+    hr {
+        visibility: hidden;
+    }
+    .flexChildrenMain {
+        border: none;
+    }
+    .is-fixed-bottom-mobile {
+        position: fixed;
+        bottom: 0;
+    }
+    .icon{
+        visibility: hidden;
+    }
+}
+@font-face {
+    font-family: 'monta';
+    src: url("../icons/fonts/Monta-Iconpack-V2019.ttf");
+    src: url("../icons/fonts/Monta-Iconpack-V2019.woff");
+    src: url("../icons/fonts/Monta-Iconpack-V2019.eot");
+    src: url("../icons/fonts/Monta-Iconpack-V2019.svg");
+}
