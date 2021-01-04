@@ -68,22 +68,24 @@ function listView(){
     container.innerHTML = dataContainerList;
 };
 function daysConstructer(item) {
-    dataContainerCalender += `<div class="flexChildrenMain"><div>${item[0].day}</div><hr><div class="">
+    dataContainerCalender += `<div class="flexChildrenMain"><div class="dayItemsmobile">${item[0].day}</div><hr><div class="">
     ${item.map(classConstructerCalender)} </div></div>`;
-      dataContainerList +=`<div class="has-text-right dayItems" >${item[0].day}</div><div class="Items">${item.map(classConstructerList)}</div>`;    
+      dataContainerList +=`<div class="has-text-right dayItems dayItemsmobile" >${item[0].day}</div><div>${item.map(classConstructerList)}</div>`;    
 };
 function classConstructerCalender(element) {
-    return `<div class=""><div style="background-color :${colorPicker(element)};
-        margin:0 auto; width:78%" class=" is-rounded text-size-12-n">
-        ${element.name}<br>${element.teacher}<br>${element.hours}<br><span class="${onlineCheck(element)}"></span></div></div>`;
+    return `<div style="background-color :${colorPicker(element)};
+        margin:0 auto; width:78%" class=" is-rounded text-size-12-n"><span class=" icon mi-Info"></span>
+        ${element.name}<br>${element.teacher}<br>${element.hours}<br><span class="${onlineCheck(element)}"></span></div>`;
 };
 function classConstructerList(element) {
         return `<div style="background-color :${colorPicker(element)};
-         width:100%" class="Items is-rounded text-size-10-mobile-n text-size-12-n">
-        <span class="space-64-left-n space-12-mobile-n"> ${element.name} </span>
-        <span class=" space-64-right-n space-12-mobile-n space-64-left-n"> ${element.teacher} </span>
-        <span class="space-64-right-n space-64-left-n space-12-mobile-n"> ${element.hours} </span>
-        <span class=" ${onlineCheck(element)} "></span>
-        <span class="is-pulled-left  mi-Info"></span><span class="is-pulled-left mi-Info"></span>
+         width:100%" class=" columns is-rounded text-size-10-mobile-n text-size-12-n">
+        <span class="column is-6-mobile is- space-64-left-n space-12-mobile-n"> ${element.name} </span>
+        <span class="column is-6-mobile space-64-right-n space-12-mobile-n space-64-left-n"> ${element.teacher} </span>
+        <span class="column is-6-mobile space-64-right-n space-64-left-n space-12-mobile-n"> ${element.hours} </span>
+        <span class="column is-6-mobile ${onlineCheck(element)} "></span>
+        <div class="column is-12-mobile">
+        <span class="is-pulled-left icon mi-Info"></span><span class="is-pulled-left icon mi-Info"></span>
+        </div>
         </div>`;
 };
