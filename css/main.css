@@ -36,12 +36,12 @@ button:focus {
     background-color: rgba(236, 236, 236, 0.336);
 }
 .border:nth-child(1) {
-    border: 1.5px solid rgb(252, 252, 88);
+    border: 1.5px solid rgba(255, 179, 0, 0.767);
 }
 .border:nth-child(2) {
-    border: 1.5px solid rgb(42, 216, 42);
+    border: 1.5px solid rgba(31, 170, 0, 0.459);
 }
-.dayItem {
+.dayItems {
     margin: 15px 0;
     padding: 3px;
     border: 1.5px solid gray;
@@ -49,7 +49,7 @@ button:focus {
     border-radius: 10px;
     text-align: center;
 }
-.otherItem {
+.Items {
     padding: 5px;
 }
 @media screen and (max-width: 768px) {
