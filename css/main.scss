@@ -1,9 +1,17 @@
 $gray : rgba(131, 130, 130, 0.315);
 $grayborder: 1.5px solid $gray;
-.roundedBorder{
-    border: $grayborder;
+ @mixin roundedBorder{
+    background-color: rgba(236, 236, 236, 0.336);
     display: inline-block;
     border-radius: 10px;
+}
+html{
+    background-color: #f9f9f9;
+}
+.smaller{
+    position: relative;
+    margin: 100px auto;
+    width:80rem;
 }
 .home-header {
     margin-top: 3rem !important;
@@ -28,6 +36,10 @@ $grayborder: 1.5px solid $gray;
     }
     &:nth-child(even) {
         background-color: rgba(236, 236, 236, 0.336);
+        @media screen and (max-width: 768px) {
+            background-color: transparent;
+        }
+        
     }
 }
 hr {
@@ -51,13 +63,18 @@ button:focus {
     }
 }
 .dayItems {
-    margin: 15px 0;
+    margin: 25px 0;
     padding: 3px;
-    @extend .roundedBorder;
+    @include roundedBorder;
 }
 @media screen and (max-width: 768px) {
+    .icons{
+        visibility: hidden;
+    }
     .dayItemsmobile{
-        @extend .roundedBorder;
+        margin-bottom: 10px;
+        padding: 5px;
+        @include roundedBorder;
         text-align: right !important;
     }
     #mainContainer {
@@ -73,15 +90,38 @@ button:focus {
         visibility: hidden;
     }
     .flexChildrenMain {
+
+        text-align: right;
         border: none;
     }
     .is-fixed-bottom-mobile {
         position: fixed;
         bottom: 0;
     }
+}
     .icon{
-        visibility: hidden;
-    }
+    position: absolute;
+    left:65px;
+    top:70px;
+        }
+.deleteIcon{
+    width: 0;
+    height: 0;
+    &::before {
+    position: absolute;
+    right: -7px;
+    top: -2px;
+  }
+}
+    .tableIcon{
+    margin: 0 13px;
+    position: relative;
+    &::before{
+    position: absolute;
+    left:-1px;
+    top: 2px;
+}
+
 }
 @font-face {
     font-family: 'monta';
