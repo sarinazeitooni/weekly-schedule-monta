@@ -1,7 +1,11 @@
-.roundedBorder {
-  border: 1.5px solid rgba(131, 130, 130, 0.315);
-  display: inline-block;
-  border-radius: 10px;
+html {
+  background-color: #f9f9f9;
+}
+
+.smaller {
+  position: relative;
+  margin: 100px auto;
+  width: 80rem;
 }
 
 .home-header {
@@ -38,6 +42,11 @@
 .flexChildrenMain:nth-child(even) {
   background-color: rgba(236, 236, 236, 0.336);
 }
+@media screen and (max-width: 768px) {
+  .flexChildrenMain:nth-child(even) {
+    background-color: transparent;
+  }
+}
 
 hr {
   border: 0;
@@ -62,19 +71,25 @@ button:focus {
 }
 
 .dayItems {
-  margin: 15px 0;
+  margin: 25px 0;
   padding: 3px;
-  border: 1.5px solid  rgba(131, 130, 130, 0.315);
+  background-color: rgba(236, 236, 236, 0.336);
   display: inline-block;
   border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {
+  .icons {
+    visibility: hidden;
+  }
+
   .dayItemsmobile {
-    text-align: right !important;
-    border: 1.5px solid  rgba(131, 130, 130, 0.315);
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: rgba(236, 236, 236, 0.336);
     display: inline-block;
     border-radius: 10px;
+    text-align: right !important;
   }
 
   #mainContainer {
@@ -96,6 +111,7 @@ button:focus {
   }
 
   .flexChildrenMain {
+    text-align: right;
     border: none;
   }
 
@@ -103,11 +119,33 @@ button:focus {
     position: fixed;
     bottom: 0;
   }
-
-  .icon {
-    visibility: hidden;
-  }
 }
+.icon {
+  position: absolute;
+  left: 65px;
+  top: 70px;
+}
+
+.deleteIcon {
+  width: 0;
+  height: 0;
+}
+.deleteIcon::before {
+  position: absolute;
+  right: -7px;
+  top: -2px;
+}
+
+.tableIcon {
+  margin: 0 13px;
+  position: relative;
+}
+.tableIcon::before {
+  position: absolute;
+  left: -1px;
+  top: 2px;
+}
+
 @font-face {
   font-family: "monta";
   src: url("../icons/fonts/Monta-Iconpack-V2019.ttf");
