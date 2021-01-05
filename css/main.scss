@@ -6,6 +6,7 @@ $grayborder: 1.5px solid $gray;
     border-radius: 10px;
 }
 html{
+    font-family: 'iranyekan';
     background-color: #f9f9f9;
 }
 .smaller{
@@ -129,4 +130,11 @@ button:focus {
     src: url("../icons/fonts/Monta-Iconpack-V2019.woff");
     src: url("../icons/fonts/Monta-Iconpack-V2019.eot");
     src: url("../icons/fonts/Monta-Iconpack-V2019.svg");
+}
+@font-face{
+    font-family: 'iranyekan';
+    src: url("../client_resources/fonts/iranyekan/ttf/iranyekanwebblackfanum.ttf");
+    src: url("../client_resources/fonts/iranyekan/woff/iranyekanwebblackfanum.woff");
+    src: url("../client_resources/fonts/iranyekan/svg/iranyekanwebblackfanum.svg");
+    src: url("../client_resources/fonts/iranyekan/eot/iranyekanwebblackfanum.eot");
 }
