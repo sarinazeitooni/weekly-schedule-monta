@@ -8,21 +8,22 @@
     <link rel="stylesheet" href="css/montav2.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="body" onload="initialData()">
-<div class="home-header content">
+<body  style="background-color: #f9f9f9;" onload="initialData()">
+<div class="home-header smaller content">
     <div class="columns">
-        <span class="has-text-danger text-size-10-mobile-n text-size-16-n is-hidden-widescreen-only is-pulled-left button ">حذف گروهی</span>
+        <span class="has-text-danger text-size-10-mobile-n text-size-16-n is-hidden-tablet is-pulled-left ">  حذف گروهی</span>
         <h3 class="text-dark-n text-size-32-n text-size-12-mobile-n ">برنامه هفتگی کلاس پنجم 5/1</h3>
     </div>
-    <div class="column is-hidden-mobile"><span class="mi-Info"></span>
-    <button id="calenderView" onclick="calenderView()" class="space-4-vertical-n button ">نمایش تقویمی </button>
-    <span class="mi-Info"></span>
-    <button id="listView" onclick="listView()" class=" space-4-vertical-n button">نمایش لیستی </button>
-    <span id="deleter" class="text-size-8-mobile-n text-size-12-n has-text-danger is-pulled-left button ">حذف گروهی</span></div>
+    <div class="column is-hidden-mobile"><span class="tableIcon mi-Info"></span>
+    <span id="calenderView" onclick="calenderView()" class="space-4-vertical-n ">نمایش تقویمی </span>
+    <span class="tableIcon mi-Info"></span>
+    <span id="listView" onclick="listView()" class=" space-4-vertical-n">نمایش لیستی </span>
+    <span id="deleter" class="text-size-8-mobile-n text-size-12-n has-text-danger is-pulled-left"> حذف گروهی</span><span class="icon mi-Info"></span></div>
     <br>
-   <div id="mainContainer" class="flexContainer container"></div> 
-   <div class="column is-hidden-fullhd has-background-white space-4-top-n has-text-centered is-fixed-bottom-mobile"><button class="border has-background-white button">فعالسازی این برنامه</button>
-    <button class=" has-background-white button border" >افزودن زنگ</button></div>
+   <div id="mainContainer" class="flexContainer"></div> 
+   <div class="column is-hidden-fullhd has-background-white space-4-top-n has-text-centered is-fixed-bottom-mobile">
+       <span class="border has-background-white button">فعالسازی این برنامه</span>
+    <span class=" has-background-white button border" >افزودن زنگ</span></div>
 </div>
     <script src="js/main.js"></script>
 </body>
