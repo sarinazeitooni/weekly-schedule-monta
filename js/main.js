@@ -78,7 +78,7 @@ function daysConstructer(item) {
 };
 function classConstructerCalender(element) {
     return `<div style="background-color :${colorPicker(element)};position:relative;
-        margin:5px auto; width:90%; padding:10px;" class=" is-rounded text-size-10-n"><span class="deleteIcon icons mi-Info"></span>
+        margin:5px auto; width:80%; padding:10px;" class=" is-rounded text-size-10-n"><span class="deleteIcon icons mi-Info"></span>
         ${element.name}<br>${element.teacher}<br>${element.hours}<br><span class="${onlineCheck(element)}"></span></div>`;
 };
 function classConstructerList(element) {
