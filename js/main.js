@@ -88,7 +88,7 @@ function classConstructerCalender(element) {
 function classConstructerList(element) {
 
   return  `<div style="flex-wrap:wrap; background-color :${colorPicker(element)};" class="columns fullwidth is-rounded margin-mobile is-flex-mobile text-size-10-mobile-n text-size-12-n">
-        <span class="column width50-mobile has-text-weight-bolder" style=" text-align: right; margin: 10px;" > <span class="mi-No-answer"></span> ${element.name} </span>
+        <span class="column width50-mobile has-text-weight-bolder" style=" text-align: right; margin: 10px;" > <span class="mi-No-answer is-hidden-mobile"></span> ${element.name} </span>
         ${teacherCheck(element.teacher)}
           <span class="column width50-mobile text-grey-n" style='line-height: inherit; text-align: right; padding: 3px; margin: 10px;'><span>${element.hours}</span><span class="mi-Clock-icon"></span></span>
         ${onlineCheckList(element)}
