@@ -3,28 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>task-3</title>
-    <link rel="stylesheet" href="css/monta.css">
-    <link rel="stylesheet" href="css/montav2.css">
-    <link rel="stylesheet" href="css/main.css">
+    <title>MONTA</title>
+    <link rel="stylesheet" href="/css/monta.css">
+    <link rel="stylesheet" href="/css/montav2.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
-<body  style="background-color: #f9f9f9;" onload="initialData()">
-<div class="home-header smaller content">
-    <div class="columns">
-        <span class="has-text-danger text-size-10-mobile-n text-size-16-n is-hidden-tablet is-pulled-left ">  حذف گروهی</span>
-        <h3 class="text-dark-n text-size-32-n text-size-12-mobile-n ">برنامه هفتگی کلاس پنجم 5/1</h3>
+<body onload="initialData()">
+    <div class="is-middle home-header">
+        <div class="columns">
+            <span class="has-text-danger text-size-10-mobile-n text-size-16-n is-hidden-tablet is-pulled-left ">  حذف گروهی</span>
+            <h3 class="text-dark-n has-has-text-weight-bolder text-size-32-n text-size-12-mobile-n ">برنامه هفتگی کلاس پنجم 5/1</h3>
+        </div>
+        <div class="column is-hidden-mobile">
+        <span id="calenderView" onclick="calenderView()" class="space-4-vertical-n "><span style="position: relative; left: 3px; top:35;" class="mi-Calendar-1"></span>نمایش تقویمی </span>
+        &nbsp;
+        <span id="listView" onclick="listView()" class=" space-4-vertical-n"><span style="position: relative; left: 3px; top:35;" class="mi-Calendar-1"></span>نمایش لیستی </span>
+        <span id="deleter" class="text-size-8-mobile-n text-size-12-n has-text-danger is-pulled-left"> حذف گروهی 
+            <span style="position: absolute;left: 40px;top: 25px;" class=" mi-print"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span>
+        </span>
+        </span></div>
+        <br>
+       <div id="maincontainer" class=" flexContainer"></div> 
+       <div class="column space-4-top-n is-fixed-bottom-mobile">
+           <span style="border: 1.5px solid rgb(230, 230, 84);color: rgb(230, 230, 84)" class=" has-background-white button">فعالسازی این برنامه</span>
+        <span style="border: 1.5px solid green;color: green;" class=" has-background-white button " >افزودن زنگ</span></div>
     </div>
-    <div class="column is-hidden-mobile"><span class="tableIcon mi-Info"></span>
-    <span id="calenderView" onclick="calenderView()" class="space-4-vertical-n ">نمایش تقویمی </span>
-    <span class="tableIcon mi-Info"></span>
-    <span id="listView" onclick="listView()" class=" space-4-vertical-n">نمایش لیستی </span>
-    <span id="deleter" class="text-size-8-mobile-n text-size-12-n has-text-danger is-pulled-left"> حذف گروهی</span><span class="icon mi-Info"></span></div>
-    <br>
-   <div id="mainContainer" class="flexContainer"></div> 
-   <div class="column is-hidden-fullhd has-background-white space-4-top-n has-text-centered is-fixed-bottom-mobile">
-       <span class="border has-background-white button">فعالسازی این برنامه</span>
-    <span class=" has-background-white button border" >افزودن زنگ</span></div>
-</div>
-    <script src="js/main.js"></script>
 </body>
-</html>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>

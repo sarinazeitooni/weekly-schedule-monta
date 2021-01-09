@@ -1,38 +1,39 @@
-$gray : rgba(131, 130, 130, 0.315);
-$grayborder: 1.5px solid $gray;
- @mixin roundedBorder{
+@import url("variables.scss");
+@import url("global.css");
+@font-face{
+    font-family: 'iranyekan';
+    src: url("../client_resources/fonts/iranyekan/ttf/iranyekanwebblackfanum.ttf");
+    src: url("../client_resources/fonts/iranyekan/woff/iranyekanwebblackfanum.woff");
+    src: url("../client_resources/fonts/iranyekan/svg/iranyekanwebblackfanum.svg");
+    src: url("../client_resources/fonts/iranyekan/eot/iranyekanwebblackfanum.eot");
+}
+@mixin roundedBorder($borderRadius){
     background-color: rgba(236, 236, 236, 0.336);
     display: inline-block;
-    border-radius: 10px;
+    border-radius: $borderRadius;
 }
-html{
-    font-family: 'iranyekan';
-    background-color: #f9f9f9;
-}
-.smaller{
-    position: relative;
-    margin: 100px auto;
-    width:80rem;
+#calenderView:hover , #listView:hover{
+    cursor: pointer;
 }
 .home-header {
     margin-top: 3rem !important;
 }
-#mainContainer {
-    width: 80%;
+#maincontainer {
+    width:85%;
     margin: -10px auto;
-    border: $grayborder;
+    border: 1.5px solid rgba(131, 130, 130, 0.315);
     border-radius: 10px;
 }
-.flexContainer {
+.flexcontainer {
     display: flex;
     align-content: center;
     justify-content: center;
 }
-.flexChildrenMain {
-    border-left: $grayborder;
-    flex-basis: 200px;
+.flexchildrenmain {
+    border-left: 1.5px solid rgba(131, 130, 130, 0.315);
+    width: 380px;
     text-align: center;
-    &:nth-child(6){
+    &:nth-last-child(1){
         border-left: none
     }
     &:nth-child(even) {
@@ -43,78 +44,81 @@ html{
         
     }
 }
-hr {
-    border: 0;
-    height: 1.5px;
-    background-color: $gray;
-}
-button:focus {
-    outline: none;
-    border: none;
-}
 .is-rounded {
     border-radius: 10px;
-}
-.border{
-    &:nth-child(1){
-    border: 1.5px solid rgba(255, 179, 0, 0.767);
-    }
-    &:nth-child(2) {
-        border: 1.5px solid rgba(31, 170, 0, 0.459);
-    }
 }
 .dayItems {
     margin: 25px 0;
     padding: 3px;
-    @include roundedBorder;
+    @include roundedBorder(10px);
+}
+.is-middle{
+    width: 80%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 @media screen and (max-width: 768px) {
+    .is-middle{
+        width: 100%;
+    }
+    .width50-mobile{
+        min-width: 30%;
+        margin: 0;
+        padding: 0;
+    }
+    .fullwidth{
+        width: 250px;
+    }
+    #mainContainer {
+        width: 300px;
+        border: none;
+        display: block !important;
+        align-content: stretch !important;
+        justify-content: flex-start;
+    }
+    .margin-mobile{
+        margin-top:5px;
+    }
+    .flexcontainer{
+     flex-direction: column;
+     border:none;
+    }
+    span br{
+        display: none;
+    }
     .icons{
         visibility: hidden;
     }
     .dayItemsmobile{
         margin-bottom: 10px;
         padding: 5px;
-        @include roundedBorder;
+        @include roundedBorder(10px);
         text-align: right !important;
     }
-    #mainContainer {
-        width: 90%;
-        border: none !important;
-    }
-    #mainContainer {
-        display: block !important;
-        align-content: stretch !important;
-        justify-content: flex-start;
-    }
     hr {
-        visibility: hidden;
+        display: none;
     }
-    .flexChildrenMain {
-
+    .flexchildrenmain {
         text-align: right;
         border: none;
     }
     .is-fixed-bottom-mobile {
         position: fixed;
         bottom: 0;
+        left: 13%;
     }
 }
-    .icon{
-    position: absolute;
-    left:65px;
-    top:70px;
-        }
-.deleteIcon{
-    width: 0;
-    height: 0;
+.deleteicon{ 
     &::before {
+    background-color: white;
+    border-radius: 50%;
     position: absolute;
-    right: -7px;
-    top: -2px;
+    right: -2px;
+    top: 2px;
   }
 }
-    .tableIcon{
+    .tableicon{
     margin: 0 13px;
     position: relative;
     &::before{
@@ -122,19 +126,4 @@ button:focus {
     left:-1px;
     top: 2px;
 }
-
-}
-@font-face {
-    font-family: 'monta';
-    src: url("../icons/fonts/Monta-Iconpack-V2019.ttf");
-    src: url("../icons/fonts/Monta-Iconpack-V2019.woff");
-    src: url("../icons/fonts/Monta-Iconpack-V2019.eot");
-    src: url("../icons/fonts/Monta-Iconpack-V2019.svg");
-}
-@font-face{
-    font-family: 'iranyekan';
-    src: url("../client_resources/fonts/iranyekan/ttf/iranyekanwebblackfanum.ttf");
-    src: url("../client_resources/fonts/iranyekan/woff/iranyekanwebblackfanum.woff");
-    src: url("../client_resources/fonts/iranyekan/svg/iranyekanwebblackfanum.svg");
-    src: url("../client_resources/fonts/iranyekan/eot/iranyekanwebblackfanum.eot");
 }

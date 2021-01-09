@@ -1,26 +1,28 @@
-html {
+@import url("variables.scss");
+@import url("global.css");
+@font-face {
   font-family: "iranyekan";
-  background-color: #f9f9f9;
+  src: url("../client_resources/fonts/iranyekan/ttf/iranyekanwebblackfanum.ttf");
+  src: url("../client_resources/fonts/iranyekan/woff/iranyekanwebblackfanum.woff");
+  src: url("../client_resources/fonts/iranyekan/svg/iranyekanwebblackfanum.svg");
+  src: url("../client_resources/fonts/iranyekan/eot/iranyekanwebblackfanum.eot");
 }
-
-.smaller {
-  position: relative;
-  margin: 100px auto;
-  width: 80rem;
+#calenderView:hover, #listView:hover {
+  cursor: pointer;
 }
 
 .home-header {
   margin-top: 3rem !important;
 }
 
-#mainContainer {
-  width: 80%;
+#maincontainer {
+  width: 85%;
   margin: -10px auto;
   border: 1.5px solid rgba(131, 130, 130, 0.315);
   border-radius: 10px;
 }
 
-.flexContainer {
+.flexcontainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,44 +33,25 @@ html {
           justify-content: center;
 }
 
-.flexChildrenMain {
+.flexchildrenmain {
   border-left: 1.5px solid rgba(131, 130, 130, 0.315);
-  -ms-flex-preferred-size: 200px;
-      flex-basis: 200px;
+  width: 380px;
   text-align: center;
 }
-.flexChildrenMain:nth-child(6) {
+.flexchildrenmain:nth-last-child(1) {
   border-left: none;
 }
-.flexChildrenMain:nth-child(even) {
+.flexchildrenmain:nth-child(even) {
   background-color: rgba(236, 236, 236, 0.336);
 }
 @media screen and (max-width: 768px) {
-  .flexChildrenMain:nth-child(even) {
+  .flexchildrenmain:nth-child(even) {
     background-color: transparent;
   }
 }
 
-hr {
-  border: 0;
-  height: 1.5px;
-  background-color: rgba(131, 130, 130, 0.315);
-}
-
-button:focus {
-  outline: none;
-  border: none;
-}
-
 .is-rounded {
   border-radius: 10px;
-}
-
-.border:nth-child(1) {
-  border: 1.5px solid rgba(255, 179, 0, 0.767);
-}
-.border:nth-child(2) {
-  border: 1.5px solid rgba(31, 170, 0, 0.459);
 }
 
 .dayItems {
@@ -79,7 +62,55 @@ button:focus {
   border-radius: 10px;
 }
 
+.is-middle {
+  width: 80%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (max-width: 768px) {
+  .is-middle {
+    width: 100%;
+  }
+
+  .width50-mobile {
+    min-width: 30%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .fullwidth {
+    width: 250px;
+  }
+
+  #mainContainer {
+    width: 300px;
+    border: none;
+    display: block !important;
+    -ms-flex-line-pack: stretch !important;
+        align-content: stretch !important;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .margin-mobile {
+    margin-top: 5px;
+  }
+
+  .flexcontainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: none;
+  }
+
+  span br {
+    display: none;
+  }
+
   .icons {
     visibility: hidden;
   }
@@ -93,25 +124,11 @@ button:focus {
     text-align: right !important;
   }
 
-  #mainContainer {
-    width: 90%;
-    border: none !important;
-  }
-
-  #mainContainer {
-    display: block !important;
-    -ms-flex-line-pack: stretch !important;
-        align-content: stretch !important;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-
   hr {
-    visibility: hidden;
+    display: none;
   }
 
-  .flexChildrenMain {
+  .flexchildrenmain {
     text-align: right;
     border: none;
   }
@@ -119,46 +136,24 @@ button:focus {
   .is-fixed-bottom-mobile {
     position: fixed;
     bottom: 0;
+    left: 13%;
   }
 }
-.icon {
+.deleteicon::before {
+  background-color: white;
+  border-radius: 50%;
   position: absolute;
-  left: 65px;
-  top: 70px;
-}
-
-.deleteIcon {
-  width: 0;
-  height: 0;
-}
-.deleteIcon::before {
-  position: absolute;
-  right: -7px;
-  top: -2px;
-}
-
-.tableIcon {
-  margin: 0 13px;
-  position: relative;
-}
-.tableIcon::before {
-  position: absolute;
-  left: -1px;
+  right: -2px;
   top: 2px;
 }
 
-@font-face {
-  font-family: "monta";
-  src: url("../icons/fonts/Monta-Iconpack-V2019.ttf");
-  src: url("../icons/fonts/Monta-Iconpack-V2019.woff");
-  src: url("../icons/fonts/Monta-Iconpack-V2019.eot");
-  src: url("../icons/fonts/Monta-Iconpack-V2019.svg");
+.tableicon {
+  margin: 0 13px;
+  position: relative;
 }
-@font-face {
-  font-family: "iranyekan";
-  src: url("../client_resources/fonts/iranyekan/ttf/iranyekanwebblackfanum.ttf");
-  src: url("../client_resources/fonts/iranyekan/woff/iranyekanwebblackfanum.woff");
-  src: url("../client_resources/fonts/iranyekan/svg/iranyekanwebblackfanum.svg");
-  src: url("../client_resources/fonts/iranyekan/eot/iranyekanwebblackfanum.eot");
+.tableicon::before {
+  position: absolute;
+  left: -1px;
+  top: 2px;
 }
 /*# sourceMappingURL=main.css.map */

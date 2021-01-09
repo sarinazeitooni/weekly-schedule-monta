@@ -23,7 +23,7 @@
   top: 0px;
   right: 0px;
   left: 0px;
-  bottom: 0p
+  bottom: 0px; }
 .browserupgrade a {
   text-decoration: underline;
   padding: 5px 10px;
@@ -195,7 +195,7 @@
 .mi-delete-old:before {
   content: "\e914"; }
 
-.mi-print:before {
+.mi-t:before {
   content: "\e915"; }
 
 .mi-share:before {

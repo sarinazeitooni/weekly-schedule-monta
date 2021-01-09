@@ -1,0 +1,9 @@
+html{
+    font-family: 'iranyekan';
+    background-color: #f9f9f9;
+}
+hr {
+    border: 0;
+    height: 1.5px;
+    background-color: rgba(131, 130, 130, 0.315);
+}
