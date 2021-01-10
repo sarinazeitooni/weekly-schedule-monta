@@ -93,10 +93,10 @@ function classConstructerList(element) {
           <span class="column width50-mobile text-grey-n" style='line-height: inherit; text-align: right; padding: 3px; margin: 10px;'><span>${element.hours}</span><span class="mi-Clock-icon"></span></span>
         ${onlineCheckList(element)}
         <div class=" column is-hidden-mobile">
-        <span style="background-color: white; border-radius: 20px; padding: 1px; margin:1px;" class="is-pulled-left icons mi-ic-edit">
+        <span style="background-color: white; border-radius: 20px; padding: 3px; margin:1px;" class="is-pulled-left icons mi-ic-edit">
             <span class='path1'></span><span class='path2'></span>
                  </span>
-        <span style="background-color: white; border-radius: 20px; padding: 1px; margin:1px;" class="is-pulled-left icons mi-ic-trash"">
+        <span style="background-color: white; border-radius: 20px; padding: 3px; margin:1px;" class="is-pulled-left icons mi-ic-trash"">
             <span class="path1"></span><span class="path2"></span>
                  </span>
         </div>
