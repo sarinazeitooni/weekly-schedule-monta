@@ -70,10 +70,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .is-middle {
-    width: 100%;
-  }
-
   .width50-mobile {
     min-width: 30%;
     margin: 0;
@@ -81,7 +77,7 @@
   }
 
   .fullwidth {
-    width: 250px;
+    width: 200px;
   }
 
   #mainContainer {
@@ -134,9 +130,9 @@
   }
 
   .is-fixed-bottom-mobile {
+    width: 100%;
     position: fixed;
     bottom: 0;
-    width:100%;
   }
 }
 .deleteicon::before {

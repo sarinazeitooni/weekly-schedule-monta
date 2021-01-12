@@ -1,8 +1,9 @@
+let weeklySchedule = JSON.parse(weeklyScheduleData);
 let container = document.getElementById("maincontainer");
-    let deleterButton = document.getElementById("deleter");
-    let dataContainerCalender = "";
-    let dataContainerList = "";
-    let bgColoritem;
+let deleterButton = document.getElementById("deleter");
+let dataContainerCalender = "";
+let dataContainerList = "";
+let bgColoritem;
     function initialData() {
     listView();
     };
@@ -56,7 +57,7 @@ function onlineCheckCalendar(element) {
         return "";
     }
 };
-weeklyschedule.map(daysConstructer);
+    weeklySchedule.map(daysConstructer);
 function daysConstructer(item) {
     dataContainerCalender += `<div class=" flexchildrenmain"><div class="space-top dayItemsmobile">
         <span class="is-hidden-widescreen tableicon mi-Info"></span>${item.day}</div>
@@ -70,7 +71,7 @@ function daysConstructer(item) {
 };
 function classConstructerCalender(element) {
     return `<div style="background-color :${colorPicker(element)};position:relative;
-        margin:3px 15px; padding:15px 5px;" class=" is-rounded mobiletest text-size-10-n">
+        margin:10px 15px; padding:15px 5px;" class=" is-rounded mobiletest text-size-10-n">
         <span class=" deleteicon icons mi-Delete-X-icon---16px"></span>
        <span class="has-text-weight-bolder column" style="padding:1px"> ${element.name}</span>
        <span class='text-grey-n' style='display:block; padding: 3px;' >${element.teacher}</span>
@@ -87,10 +88,10 @@ function classConstructerCalender(element) {
  };
 function classConstructerList(element) {
 
-  return  `<div style="flex-wrap:wrap; background-color :${colorPicker(element)};" class="columns fullwidth is-rounded margin-mobile is-flex-mobile text-size-10-mobile-n text-size-12-n">
+  return  `<div style="flex-wrap:wrap; background-color :${colorPicker(element)}; margin-bottom:25px; "class="columns fullwidth is-rounded margin-mobile is-flex-mobile text-size-10-mobile-n text-size-12-n">
         <span class="column width50-mobile has-text-weight-bolder" style=" text-align: right; margin: 10px;" > <span class="mi-No-answer is-hidden-mobile"></span> ${element.name} </span>
         ${teacherCheck(element.teacher)}
-          <span class="column width50-mobile text-grey-n" style='line-height: inherit; text-align: right; padding: 3px; margin: 10px;'><span>${element.hours}</span><span class="mi-Clock-icon"></span></span>
+          <span class="column width50-mobile text-grey-n" style='line-height: inherit; text-align: right; padding: 3px; margin: 10px;'><span class="mi-Clock-icon"></span><span>${element.hours}</span></span>
         ${onlineCheckList(element)}
         <div class=" column is-hidden-mobile">
         <span style="background-color: white; border-radius: 20px; padding: 3px; margin:1px;" class="is-pulled-left icons mi-ic-edit">
